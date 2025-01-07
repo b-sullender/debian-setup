@@ -45,7 +45,7 @@ To set up your Debian system, follow these steps:
 4. **Run the Setup Script**  
    Execute the setup script:  
    ```shell
-   bash bookworm.sh
+   sudo bash bookworm.sh
    ```
 
    Follow the prompts during execution and provide any required inputs.

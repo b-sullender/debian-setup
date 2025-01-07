@@ -159,6 +159,26 @@ for USER in $USERS; do
     cp -r templates/* $TEMPLATEDIR
 done
 
+# ------------------- #
+# ----- OpenRGB ----- #
+# ------------------- #
+
+echo "Installing i2c Kernel Modules"
+apt install -y i2c-tools
+touch /etc/modules-load.d/i2c.conf
+sh -c 'echo "i2c-dev" >> /etc/modules-load.d/i2c.conf'
+sh -c 'echo "i2c-i801" >> /etc/modules-load.d/i2c.conf'
+sh -c 'echo "i2c-piix4" >> /etc/modules-load.d/i2c.conf'
+
+echo "Downloading OpenRGB"
+if wget -q --timeout=$timeout https://openrgb.org/releases/release_0.9/openrgb_0.9_amd64_bookworm_b5f46e3.deb; then
+    echo "Installing OpenRGB"
+    apt install ./openrgb_0.9_amd64_bookworm_b5f46e3.deb
+    rm openrgb_0.9_amd64_bookworm_b5f46e3.deb
+else
+    print_red "Failed to download OpenRGB."
+fi
+
 # ------------------------- #
 # ----- Atomic Wallet ----- #
 # ------------------------- #
@@ -363,4 +383,6 @@ cp icons/codeblocks.svg /usr/share/pixmaps/codeblocks.svg
 # ----- WE ARE DONE ----- #
 # ----------------------- #
 
-systemctl reboot
+echo "****************************************************"
+echo " Debian 12 (Bookworm) Package Installation Complete "
+echo "****************************************************"
