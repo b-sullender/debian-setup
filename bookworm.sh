@@ -57,7 +57,7 @@ apt install -y wget gpg curl apt-transport-https speedtest-cli rar unrar jq htop
 
 # Essential coding and packaging tools
 echo "Installing essential coding and packaging tools"
-apt install -y gcc g++ gcc-multilib g++-multilib gcc-mingw-w64-base nasm fasm build-essential devscripts make ninja-build cmake cmake-gui git debhelper dh-make lintian default-jdk gradle libc6-i386 flex bison pahole
+apt install -y gcc g++ gcc-multilib g++-multilib gcc-mingw-w64-base nasm fasm build-essential devscripts make ninja-build llvm cmake cmake-gui git debhelper dh-make lintian default-jdk gradle libc6-i386 flex bison pahole
 
 # Development files, examples, documentation, and misc packages
 echo "Installing development files, examples, documentation and misc packages"
@@ -97,7 +97,7 @@ apt install -y evolution thunderbird
 apt install -y libreoffice
 
 # Image editing & painting software
-apt install -y krita inkscape
+apt install -y kolourpaint krita inkscape
 
 # Sample any color from anywhere on the desktop, create palettes or import from images
 apt install -y gpick
