@@ -30,6 +30,7 @@ apt -y full-upgrade
 echo "Installing dbus"
 apt install -y dbus
 echo "Starting dbus"
+systemctl enable dbus
 systemctl start dbus
 
 # Install software-properties-common (for apt-add-repository)
@@ -37,8 +38,8 @@ echo "Installing software-properties-common"
 apt install -y software-properties-common
 
 # Add contrib non-free (rar, etc)
-echo "Adding repository components contrib non-free"
-apt-add-repository --component contrib non-free
+echo "Adding repository components contrib non-free non-free-firmware"
+yes | apt-add-repository --component contrib non-free non-free-firmware
 
 # i386 architecture for cross-compilation
 echo "Adding architecture i386 to dpkg"

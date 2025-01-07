@@ -86,7 +86,7 @@ To adjust scaling for Qt applications, follow these steps:
    ```  
    Adjust the value as necessary for your display.
    
-2. Restart your computer to apply the changes.
+2. Reboot your computer to apply the changes.
 
 ## Contributing
 
