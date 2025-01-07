@@ -59,19 +59,34 @@ bash config-gnome.sh
 
 ### 4K Resolution & Above
 
-If you are using a 4K resolution or higher, you may want to scale the login screen accordingly. Follow these steps to adjust the login screen scaling:
+If you're using a 4K resolution or higher, certain elements, such as the login screen or Qt applications, may not scale correctly. The following sections explain how to adjust the scaling to ensure proper display.
+
+#### GNOME Display Manager (GDM)
+
+To scale the login screen appropriately for 4K resolution, follow these steps:
 
 1. Create an override file by running the following command:
    ```shell
    echo -e "[org.gnome.desktop.interface]\nscaling-factor=2" | sudo tee /usr/share/glib-2.0/schemas/93_hidpi.gschema.override > /dev/null
    ```
    Note: Change the value of `scaling-factor` (e.g., `2`) to fit your needs.
-2. Reinitialize the schemas by executing the following command:
+   
+2. Reinitialize schemas by executing the following command:
    ```shell
    sudo glib-compile-schemas /usr/share/glib-2.0/schemas
    ```
 
-This will successfully scale the login screen for 4K resolution and above.
+#### Qt Applications
+
+To adjust scaling for Qt applications, follow these steps:
+
+1. Create a script to set the `QT_AUTO_SCREEN_SCALE_FACTOR` environment variable:  
+   ```shell
+   echo -e "export QT_AUTO_SCREEN_SCALE_FACTOR=2" | sudo tee /etc/profile.d/hidpi.sh > /dev/null
+   ```  
+   Adjust the value as necessary for your display.
+   
+2. Restart your computer to apply the changes.
 
 LICENSE TERMS
 =============
