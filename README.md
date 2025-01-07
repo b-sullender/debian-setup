@@ -88,26 +88,6 @@ To adjust scaling for Qt applications, follow these steps:
    
 2. Restart your computer to apply the changes.
 
-LICENSE TERMS
-=============
-```
-  This software is provided 'as-is', without any express or implied
-  warranty.  In no event will the authors be held liable for any damages
-  arising from the use of this software.
-  
-  Permission is granted to anyone to use this software for any purpose,
-  including commercial applications, and to alter it and redistribute it
-  freely, subject to the following restrictions:
-  
-  (1) If any part of the source code for this software is distributed, then this
-      README file must be included, with this copyright and no-warranty notice
-      unaltered; and any additions, deletions, or changes to the original files
-      must be clearly indicated in accompanying documentation.
-  (2) Permission for use of this software is granted only if the user accepts
-      full responsibility for any undesirable consequences; the authors accept
-      NO LIABILITY for damages of any kind.
-```
-
 ## Contributing
 
 Contributions are welcome! If you have any improvements or bug fixes, feel free to open an issue or submit a pull request.
