@@ -261,7 +261,7 @@ fi
 # ------------------- #
 
 echo "Installing MakeMKV"
-apt install ./packages/makemkv_1.17.6_amd64.deb
+apt install ./packages/makemkv_1.17.8_amd64.deb
 
 # ------------------------------ #
 # ------- Microsoft .NET ------- #
