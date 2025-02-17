@@ -103,6 +103,12 @@ apt install -y kolourpaint krita inkscape
 # Sample any color from anywhere on the desktop, create palettes or import from images
 apt install -y gpick
 
+# Burn, copy and erase CD and DVD media
+apt install -y brasero
+
+# Blu-ray playback support (VLC or MPlayer)
+apt install -y libbluray-bdj
+
 # VLC Media Player
 apt install -y vlc
 
