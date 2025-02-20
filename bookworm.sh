@@ -103,6 +103,9 @@ apt install -y kolourpaint krita inkscape
 # Sample any color from anywhere on the desktop, create palettes or import from images
 apt install -y gpick
 
+# Copy and rip CD media
+apt install -y cdparanoia sound-juicer
+
 # Burn, copy and erase CD and DVD media
 apt install -y brasero
 
@@ -267,7 +270,7 @@ fi
 # ------------------- #
 
 echo "Installing MakeMKV"
-apt install ./packages/makemkv_1.17.8_amd64.deb
+apt install ./packages/bookworm/makemkv_1.17.8_amd64.deb
 
 # ------------------------------ #
 # ------- Microsoft .NET ------- #
