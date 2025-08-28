@@ -70,7 +70,23 @@ apt install -y device-tree-compiler zlib1g:i386
 
 # Scripting tools
 echo "Installing scripting tools"
-apt install -y php php-cli php-cgi php-json php-mysql php-curl php-zip php-xml php8.2-common python2 python3 python3-yaml python3-numpy python3-scipy python3-matplotlib python3-pandas python3-requests python3-bs4 python3-django python-django-doc python3-flask python3-sqlalchemy python3-pytest python3-virtualenv python3-bottleneck python-bottleneck-doc python3-selenium
+apt install -y php php-cli php-cgi php-json php-mysql php-curl php-zip php-xml php-gd php8.2-common python2 python3 python3-yaml python3-numpy python3-scipy python3-matplotlib python3-pandas python3-requests python3-bs4 python3-django python-django-doc python3-flask python3-sqlalchemy python3-pytest python3-virtualenv python3-bottleneck python-bottleneck-doc python3-selenium
+
+# OpenCV library for computer vision (face recognition)
+echo "Installing OpenCV for PHP"
+git clone https://github.com/php-opencv/php-opencv.git
+cd php-opencv
+phpize
+./configure
+make
+make install
+cd ../
+sh -c "echo 'extension=opencv.so' > /etc/php/$(php -r 'echo PHP_MAJOR_VERSION.\".\".PHP_MINOR_VERSION;')/mods-available/opencv.ini"
+phpenmod opencv
+rm -R php-opencv
+
+# NOTE: you can download pre-trained classifiers from https://github.com/opencv/opencv/tree/master/data/haarcascades
+# See: haarcascade_frontalface_default.xml
 
 # Code Editors, IDE's and GUI designers
 echo "Installing Code Editors, IDE's and GUI designers"
