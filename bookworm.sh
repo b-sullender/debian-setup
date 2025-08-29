@@ -81,7 +81,7 @@ phpize
 make
 make install
 cd ../
-sh -c "echo 'extension=opencv.so' > /etc/php/$(php -r 'echo PHP_MAJOR_VERSION.\".\".PHP_MINOR_VERSION;')/mods-available/opencv.ini"
+sh -c 'echo "extension=opencv.so" > /etc/php/$(php -r "echo PHP_MAJOR_VERSION.\".\".PHP_MINOR_VERSION;")/mods-available/opencv.ini'
 phpenmod opencv
 rm -R php-opencv
 
