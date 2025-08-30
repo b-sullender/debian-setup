@@ -74,7 +74,7 @@ apt install -y php php-cli php-cgi php-json php-mysql php-curl php-zip php-xml p
 
 # OpenCV library for computer vision (face recognition)
 echo "Installing OpenCV for PHP"
-git clone https://github.com/php-opencv/php-opencv.git
+git clone https://github.com/b-sullender/php-opencv.git
 cd php-opencv
 phpize
 ./configure
